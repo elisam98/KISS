@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">KISS başlatıcı</string>
-    <string name="activity_setting">KISS ayarları</string>
     <string name="ui_search_hint">Uygulama ve kişileri ara …</string>
     <string name="ui_item_search">%1$s içinde “%2$s” ara</string>
     <string name="ui_item_phone">Telefon et: “%s”</string>

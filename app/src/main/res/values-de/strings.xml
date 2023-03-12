@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">KISS Launcher</string>
-    <string name="activity_setting">KISS-Einstellungen</string>
     <string name="ui_search_hint">Suche nach Apps, Kontakten, …</string>
     <string name="ui_item_phone">„%s“ anrufen</string>
     <string name="ui_item_search">Auf %1$s nach „%2$s“ suchen</string>

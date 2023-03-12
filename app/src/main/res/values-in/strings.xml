@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">KISS launcher</string>
-    <string name="activity_setting">Pengaturan KISS</string>
     <string name="ui_search_hint">Cari apl, kontak, …</string>
     <string name="ui_item_search">Cari %1$s untuk “%2$s”</string>
     <string name="ui_item_phone">Panggil “%s”</string>

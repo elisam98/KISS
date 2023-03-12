@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="activity_setting">Nastavení KISS</string>
     <string name="ui_search_hint">Vyhledat aplikace, kontanty, …</string>
     <string name="ui_item_search">%1$s Vyhledat “%2$s”</string>
     <string name="ui_item_phone">Volat “%s”</string>
@@ -14,7 +13,6 @@
     <string name="ui_empty_2">Vždy zobrazovat historii</string>
     <string name="ui_empty_2_sub">Pro rychlý přístup</string>
     <string name="ui_empty_3">Rychlý přístup k nejvíce používaným aplikacím</string>
-    <string name="app_name">Spouštěč KISS</string>
     <string name="contacts_name">Kontakty</string>
     <string name="search_name">Poskytovatelé webového vyhledávání</string>
     <string name="settings_name">Nastavení zařízení</string>

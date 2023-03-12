@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">KISS-launcherdas</string>
-    <string name="activity_setting">KISS-instellingen</string>
     <string name="ui_search_hint">Zoek apps, contacten, …</string>
     <string name="ui_item_search">%1$s Zoek naar “%2$s”</string>
     <string name="ui_item_phone">Bel “%s”</string>
