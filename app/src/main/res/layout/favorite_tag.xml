@@ -28,7 +28,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:textAlignment="center"
-        android:textColor="@color/kiss_green"
+        android:textColor="@color/mind_purple"
         android:textSize="24sp"
         tools:text="g" />
 
