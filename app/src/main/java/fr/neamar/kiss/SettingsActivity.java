@@ -146,7 +146,7 @@ public class SettingsActivity extends PreferenceActivity implements
             SettingsActivity.this.setListPreferenceIconsPacksData(iconsPack);
             SettingsActivity.this.runOnUiThread(() -> iconsPack.setEnabled(true));
 
-            SettingsActivity.this.addCustomSearchProvidersPreferences(prefs);
+//            SettingsActivity.this.addCustomSearchProvidersPreferences(prefs);
 
             SettingsActivity.this.addHiddenTagsTogglesInformation(prefs);
             SettingsActivity.this.addTagsFavInformation();
@@ -165,14 +165,14 @@ public class SettingsActivity extends PreferenceActivity implements
             //  4. Open the 'apps excluded from KISS' page again. The data shown will be incorrect,
             //   as it won't have refreshed for the user having reset the list.
             //   This list will refresh if the user closes and re-opens KISS settings.
-            SettingsActivity.this.addExcludedAppSettings();
+//            SettingsActivity.this.addExcludedAppSettings();
             SettingsActivity.this.addExcludedFromHistoryAppSettings();
             SettingsActivity.this.addExcludedShortcutAppSettings();
         };
 
-        addEnableShortcutsSwitch();
-        addRegenerateShortcutsPreference();
-        addResetExcludedAppShortcutsPreference();
+//        addEnableShortcutsSwitch();
+//        addRegenerateShortcutsPreference();
+//        addResetExcludedAppShortcutsPreference();
         reorderPreferencesWithDisplayDependency();
 
         if (savedInstanceState == null) {
@@ -354,35 +354,35 @@ public class SettingsActivity extends PreferenceActivity implements
         return null;
     }
 
-    private void addExcludedAppSettings() {
-        final DataHandler dataHandler = KissApplication.getApplication(this).getDataHandler();
-
-        PreferenceScreen excludedAppsScreen = ExcludePreferenceScreen.getInstance(
-                this,
-                new ExcludePreferenceScreen.IsExcludedCallback() {
-                    @Override
-                    public boolean isExcluded(@NonNull AppPojo app) {
-                        return app.isExcluded();
-                    }
-                },
-                new ExcludePreferenceScreen.OnExcludedListener() {
-                    @Override
-                    public void onExcluded(final @NonNull AppPojo app) {
-                        dataHandler.addToExcluded(app);
-                    }
-
-                    @Override
-                    public void onIncluded(final @NonNull AppPojo app) {
-                        dataHandler.removeFromExcluded(app);
-                    }
-                },
-                R.string.ui_excluded_apps,
-                R.string.ui_excluded_apps_dialog_title
-        );
-
-        PreferenceGroup category = (PreferenceGroup) findPreference("exclude_apps_category");
-        category.addPreference(excludedAppsScreen);
-    }
+//    private void addExcludedAppSettings() {
+//        final DataHandler dataHandler = KissApplication.getApplication(this).getDataHandler();
+//
+//        PreferenceScreen excludedAppsScreen = ExcludePreferenceScreen.getInstance(
+//                this,
+//                new ExcludePreferenceScreen.IsExcludedCallback() {
+//                    @Override
+//                    public boolean isExcluded(@NonNull AppPojo app) {
+//                        return app.isExcluded();
+//                    }
+//                },
+//                new ExcludePreferenceScreen.OnExcludedListener() {
+//                    @Override
+//                    public void onExcluded(final @NonNull AppPojo app) {
+//                        dataHandler.addToExcluded(app);
+//                    }
+//
+//                    @Override
+//                    public void onIncluded(final @NonNull AppPojo app) {
+//                        dataHandler.removeFromExcluded(app);
+//                    }
+//                },
+//                R.string.ui_excluded_apps,
+//                R.string.ui_excluded_apps_dialog_title
+//        );
+//
+//        PreferenceGroup category = (PreferenceGroup) findPreference("exclude_apps_category");
+//        category.addPreference(excludedAppsScreen);
+//    }
 
     private void addExcludedFromHistoryAppSettings() {
         final DataHandler dataHandler = KissApplication.getApplication(this).getDataHandler();
@@ -418,58 +418,58 @@ public class SettingsActivity extends PreferenceActivity implements
      * Adds the button for resetting the apps excluded from showing shortcuts,
      * only if this device supports shortcuts
      */
-    private void addResetExcludedAppShortcutsPreference() {
-        if(!ShortcutUtil.canDeviceShowShortcuts()) {
-            return;
-        }
-
-        ResetExcludedAppShortcutsPreference pref = new ResetExcludedAppShortcutsPreference(this);
-        pref.setKey("reset-excluded-app-shortcuts");
-        pref.setOrder(59);
-        pref.setTitle(R.string.reset_excluded_app_shortcuts_name);
-        pref.setDialogMessage(R.string.reset_excluded_app_shortcuts_warn);
-
-        PreferenceGroup category = (PreferenceGroup) findPreference("exclude_apps_category");
-        category.addPreference(pref);
-    }
+//    private void addResetExcludedAppShortcutsPreference() {
+//        if(!ShortcutUtil.canDeviceShowShortcuts()) {
+//            return;
+//        }
+//
+//        ResetExcludedAppShortcutsPreference pref = new ResetExcludedAppShortcutsPreference(this);
+//        pref.setKey("reset-excluded-app-shortcuts");
+//        pref.setOrder(59);
+//        pref.setTitle(R.string.reset_excluded_app_shortcuts_name);
+//        pref.setDialogMessage(R.string.reset_excluded_app_shortcuts_warn);
+//
+//        PreferenceGroup category = (PreferenceGroup) findPreference("exclude_apps_category");
+//        category.addPreference(pref);
+//    }
 
     /**
      * Adds the switch for toggling whether shortcuts shown be shown,
      * only if this device supports shortcuts
      */
-    private void addEnableShortcutsSwitch() {
-        if(!ShortcutUtil.canDeviceShowShortcuts()) {
-            return;
-        }
-
-        SwitchPreference pref = new SwitchPreference(this);
-        pref.setDefaultValue(true);
-        pref.setKey("enable-shortcuts");
-        pref.setTitle(R.string.shortcuts_name);
-
-        PreferenceGroup category = (PreferenceGroup) findPreference("search-providers");
-        pref.setOrder(3);
-        category.addPreference(pref);
-    }
+//    private void addEnableShortcutsSwitch() {
+//        if(!ShortcutUtil.canDeviceShowShortcuts()) {
+//            return;
+//        }
+//
+//        SwitchPreference pref = new SwitchPreference(this);
+//        pref.setDefaultValue(true);
+//        pref.setKey("enable-shortcuts");
+//        pref.setTitle(R.string.shortcuts_name);
+//
+//        PreferenceGroup category = (PreferenceGroup) findPreference("search-providers");
+//        pref.setOrder(3);
+//        category.addPreference(pref);
+//    }
 
     /**
      * Adds the button for regenerating the list of shortcuts,
      * only if this device supports shortcuts
      */
-    private void addRegenerateShortcutsPreference() {
-        if(!ShortcutUtil.canDeviceShowShortcuts()) {
-            return;
-        }
-
-        ResetShortcutsPreference pref = new ResetShortcutsPreference(this);
-        pref.setDialogMessage(R.string.regenerate_shortcuts_desc);
-        pref.setKey("reset");
-        pref.setTitle(R.string.regenerate_shortcuts);
-
-        PreferenceGroup category = (PreferenceGroup) findPreference("search-providers");
-        pref.setOrder(5);
-        category.addPreference(pref);
-    }
+//    private void addRegenerateShortcutsPreference() {
+//        if(!ShortcutUtil.canDeviceShowShortcuts()) {
+//            return;
+//        }
+//
+//        ResetShortcutsPreference pref = new ResetShortcutsPreference(this);
+//        pref.setDialogMessage(R.string.regenerate_shortcuts_desc);
+//        pref.setKey("reset");
+//        pref.setTitle(R.string.regenerate_shortcuts);
+//
+//        PreferenceGroup category = (PreferenceGroup) findPreference("search-providers");
+//        pref.setOrder(5);
+//        category.addPreference(pref);
+//    }
 
     private void addExcludedShortcutAppSettings() {
         if(!ShortcutUtil.canDeviceShowShortcuts()) {
@@ -518,7 +518,7 @@ public class SettingsActivity extends PreferenceActivity implements
         removeSearchProviderSelect();
         removeSearchProviderDelete();
         removeSearchProviderDefault();
-        addCustomSearchProvidersSelect(prefs);
+//        addCustomSearchProvidersSelect(prefs);
         addCustomSearchProvidersDelete(prefs);
         addDefaultSearchProvider(prefs);
     }
@@ -547,28 +547,28 @@ public class SettingsActivity extends PreferenceActivity implements
         }
     }
 
-    @SuppressWarnings("StringSplitter")
-    private void addCustomSearchProvidersSelect(SharedPreferences prefs) {
-        MultiSelectListPreference multiPreference = new MultiSelectListPreference(this);
-        //get stored search providers or default hard-coded values
-        Set<String> availableSearchProviders = new TreeSet<>(prefs.getStringSet("available-search-providers", SearchProvider.getDefaultSearchProviders(this)));
-        String[] searchProvidersArray = new String[availableSearchProviders.size()];
-        int pos = 0;
-        //get names of search providers
-        for (String searchProvider : availableSearchProviders) {
-            searchProvidersArray[pos++] = searchProvider.split("\\|")[0];
-        }
-        String search_providers_title = this.getString(R.string.search_providers_title);
-        multiPreference.setTitle(search_providers_title);
-        multiPreference.setDialogTitle(search_providers_title);
-        multiPreference.setKey("selected-search-provider-names");
-        multiPreference.setEntries(searchProvidersArray);
-        multiPreference.setEntryValues(searchProvidersArray);
-        multiPreference.setOrder(10);
-
-        PreferenceGroup category = (PreferenceGroup) findPreference("web-providers");
-        category.addPreference(multiPreference);
-    }
+//    @SuppressWarnings("StringSplitter")
+//    private void addCustomSearchProvidersSelect(SharedPreferences prefs) {
+//        MultiSelectListPreference multiPreference = new MultiSelectListPreference(this);
+//        //get stored search providers or default hard-coded values
+//        Set<String> availableSearchProviders = new TreeSet<>(prefs.getStringSet("available-search-providers", SearchProvider.getDefaultSearchProviders(this)));
+//        String[] searchProvidersArray = new String[availableSearchProviders.size()];
+//        int pos = 0;
+//        //get names of search providers
+//        for (String searchProvider : availableSearchProviders) {
+//            searchProvidersArray[pos++] = searchProvider.split("\\|")[0];
+//        }
+//        String search_providers_title = this.getString(R.string.search_providers_title);
+//        multiPreference.setTitle(search_providers_title);
+//        multiPreference.setDialogTitle(search_providers_title);
+//        multiPreference.setKey("selected-search-provider-names");
+//        multiPreference.setEntries(searchProvidersArray);
+//        multiPreference.setEntryValues(searchProvidersArray);
+//        multiPreference.setOrder(10);
+//
+//        PreferenceGroup category = (PreferenceGroup) findPreference("web-providers");
+//        category.addPreference(multiPreference);
+//    }
 
     @SuppressWarnings("StringSplitter")
     private void addCustomSearchProvidersDelete(final SharedPreferences prefs) {

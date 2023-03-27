@@ -43,25 +43,25 @@
                 android:key="enable-app-history"
                 android:title="@string/enable_app" />
         </PreferenceCategory>
-        <PreferenceCategory
-            android:key="exclude_apps_category"
-            android:order="53"
-            android:title="@string/settings_excluded_apps">
-            <!-- ExcludedAppSettings button is added here dynamically (implicit order 54) -->
-            <!-- ExcludedFromHistoryAppSettings button is added here dynamically (implicit order 55) -->
-            <!-- ExcludedShortcutAppSettings button is added here dynamically (implicit order 56) -->
-            <fr.neamar.kiss.preference.ResetExcludedAppsPreference
-                android:dialogMessage="@string/reset_excluded_apps_warn"
-                android:key="reset-excluded-apps"
-                android:order="57"
-                android:title="@string/reset_excluded_apps_name" />
-            <fr.neamar.kiss.preference.ResetExcludedFromHistoryAppsPreference
-                android:dialogMessage="@string/reset_excluded_from_history_apps_warn"
-                android:key="reset-excluded-from-history-apps"
-                android:order="58"
-                android:title="@string/reset_excluded_from_history_apps_name" />
-            <!-- ResetExcludedAppShortcutsPreference button is added here dynamically (order 59) -->
-        </PreferenceCategory>
+<!--        <PreferenceCategory-->
+<!--            android:key="exclude_apps_category"-->
+<!--            android:order="53"-->
+<!--            android:title="@string/settings_excluded_apps">-->
+<!--            &lt;!&ndash; ExcludedAppSettings button is added here dynamically (implicit order 54) &ndash;&gt;-->
+<!--            &lt;!&ndash; ExcludedFromHistoryAppSettings button is added here dynamically (implicit order 55) &ndash;&gt;-->
+<!--            &lt;!&ndash; ExcludedShortcutAppSettings button is added here dynamically (implicit order 56) &ndash;&gt;-->
+<!--            <fr.neamar.kiss.preference.ResetExcludedAppsPreference-->
+<!--                android:dialogMessage="@string/reset_excluded_apps_warn"-->
+<!--                android:key="reset-excluded-apps"-->
+<!--                android:order="57"-->
+<!--                android:title="@string/reset_excluded_apps_name" />-->
+<!--            <fr.neamar.kiss.preference.ResetExcludedFromHistoryAppsPreference-->
+<!--                android:dialogMessage="@string/reset_excluded_from_history_apps_warn"-->
+<!--                android:key="reset-excluded-from-history-apps"-->
+<!--                android:order="58"-->
+<!--                android:title="@string/reset_excluded_from_history_apps_name" />-->
+<!--            &lt;!&ndash; ResetExcludedAppShortcutsPreference button is added here dynamically (order 59) &ndash;&gt;-->
+<!--        </PreferenceCategory>-->
 
     </PreferenceScreen>
     <PreferenceScreen
@@ -285,7 +285,7 @@
                 android:key="favorites-hide"
                 android:title="@string/favorites_hide" />
             <fr.neamar.kiss.preference.SwitchPreference
-                android:defaultValue="true"
+                android:defaultValue="false"
                 android:key="pref-hide-navbar"
                 android:summary="@string/pref_hide_navbar_desc"
                 android:title="@string/pref_hide_navbar" />
@@ -304,7 +304,7 @@
             android:key="gestures-holder"
             android:title="@string/gestures">
             <ListPreference
-                android:defaultValue="display-keyboard"
+                android:defaultValue="do-nothing"
                 android:entries="@array/gestureEntries"
                 android:entryValues="@array/gestureValues"
                 android:key="gesture-up"
@@ -422,7 +422,7 @@
     </PreferenceScreen>
     <PreferenceScreen
         android:key="providers"
-        android:summary="@string/providers_summary"
+        android:summary=""
         android:title="@string/title_providers">
         <PreferenceCategory
             android:key="search-providers"
@@ -432,38 +432,39 @@
                 android:key="enable-contacts"
                 android:order="1"
                 android:title="@string/contacts_name" />
-            <fr.neamar.kiss.preference.SwitchPreference
-                android:defaultValue="false"
-                android:key="enable-settings"
-                android:order="2"
-                android:title="@string/settings_name" />
+<!--            <fr.neamar.kiss.preference.SwitchPreference-->
+<!--                android:defaultValue="false"-->
+<!--                android:key="enable-settings"-->
+<!--                android:order="2"-->
+<!--                android:title="@string/settings_name" />-->
             <!-- Enable shortcuts switch is added here dynamically (order 3) -->
             <!-- ResetShortcutsPreference is added here dynamically (order 5) -->
-            <fr.neamar.kiss.preference.SwitchPreference
-                android:defaultValue="false"
-                android:key="enable-search"
-                android:order="6"
-                android:title="@string/search_provider_toggle" />
-            <fr.neamar.kiss.preference.SwitchPreference
-                android:defaultValue="false"
-                android:key="enable-excluded-apps"
-                android:order="7"
-                android:title="@string/excluded_apps_toggle" />
+<!--            <fr.neamar.kiss.preference.SwitchPreference-->
+<!--                android:defaultValue="false"-->
+<!--                android:key="enable-search"-->
+<!--                android:order="6"-->
+<!--                android:title="@string/search_provider_toggle" />-->
+<!--            <fr.neamar.kiss.preference.SwitchPreference-->
+<!--                android:defaultValue="false"-->
+<!--                android:key="enable-excluded-apps"-->
+<!--                android:order="7"-->
+<!--                android:title="@string/excluded_apps_toggle" />-->
         </PreferenceCategory>
-        <PreferenceCategory
-            android:key="web-providers"
-            android:title="@string/search_name">
-            <fr.neamar.kiss.preference.AddSearchProviderPreference
-                android:key="custom-search-provider-add"
-                android:order="30"
-                android:textColor="?attr/searchColor"
-                android:title="@string/custom_search_provider" />
-            <fr.neamar.kiss.preference.ResetSearchProvidersPreference
-                android:dialogMessage="@string/search_provider_reset_desc"
-                android:key="reset"
-                android:order="40"
-                android:title="@string/search_provider_reset" />
-        </PreferenceCategory>
+<!--        <PreferenceCategory-->
+<!--            android:key="web-providers"-->
+<!--            android:title="@string/search_name"-->
+<!--            android:enabled="false">-->
+<!--            <fr.neamar.kiss.preference.AddSearchProviderPreference-->
+<!--                android:key="custom-search-provider-add"-->
+<!--                android:order="30"-->
+<!--                android:textColor="?attr/searchColor"-->
+<!--                android:title="@string/custom_search_provider" />-->
+<!--            <fr.neamar.kiss.preference.ResetSearchProvidersPreference-->
+<!--                android:dialogMessage="@string/search_provider_reset_desc"-->
+<!--                android:key="reset"-->
+<!--                android:order="40"-->
+<!--                android:title="@string/search_provider_reset" />-->
+<!--        </PreferenceCategory>-->
     </PreferenceScreen>
     <PreferenceScreen
         android:key="importexport"
