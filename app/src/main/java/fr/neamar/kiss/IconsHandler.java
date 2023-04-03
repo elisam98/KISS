@@ -98,10 +98,10 @@ public class IconsHandler {
 
     private static int getAdaptiveShape(SharedPreferences pref, String key) {
         try {
-            return Integer.parseInt(pref.getString(key, String.valueOf(DrawableUtils.SHAPE_SYSTEM)));
+            return Integer.parseInt(pref.getString(key, String.valueOf(DrawableUtils.SHAPE_CIRCLE)));
         } catch (Exception ignored) {
         }
-        return DrawableUtils.SHAPE_SYSTEM;
+        return DrawableUtils.SHAPE_CIRCLE;
     }
 
     /**
