@@ -195,7 +195,6 @@
     <string name="swap_kiss_button_with_menu">Круг KISS справа</string>
     <string name="keyboard_suggestions">Автодополнение / варианты слов</string>
     <string name="notification_support">Точка на приложениях с уведомлениями</string>
-    <string name="notification_dialog">Включите доступ для KISS в меню</string>
     <string name="cant_pin_shortcut">Не удаётся создать ярлык. KISS является лончером по умолчанию\?</string>
     <string name="search_results_options">Результаты поиска</string>
     <string name="search_provider_toggle">Ссылки на службы поиска</string>

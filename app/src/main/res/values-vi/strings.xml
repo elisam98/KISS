@@ -94,7 +94,6 @@
     <string name="large_favorites_bar">Tăng kích thước mục yêu thích</string>
     <string name="copy_confirmation">Đã sao chép vào bảng ghi tạm</string>
     <string name="cant_pin_shortcut">Không thể thêm lối tắt. KISS có phải là trình chạy mặc định chưa\?</string>
-    <string name="notification_dialog">Chọn KISS trong lệnh đơn sau để bật chức năng này.</string>
     <string name="pref_fav_tags_drawable_desc">Tắt chức năng này để giảm kích cỡ bộ nhớ sử dụng bởi thẻ yêu thích</string>
     <string name="unable_to_initialize_shortcuts">Không thể khởi tạo lối tắt. KISS có phải là trình khởi chạy mặc định chưa\?</string>
     <string name="pref_show_untagged">Hiện các hành động chưa gắn thẻ</string>

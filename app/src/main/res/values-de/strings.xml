@@ -195,7 +195,6 @@
     <string name="swap_kiss_button_with_menu">KISS-Icon rechts anzeigen</string>
     <string name="keyboard_suggestions">Tastatur-Vorschläge aktivieren</string>
     <string name="notification_support">Apps mit Benachrichtigungen mit einem Punkt hervorheben</string>
-    <string name="notification_dialog">KISS Launcher in der folgenden Auswahl anwählen um ihn zu aktivieren.</string>
     <string name="cant_pin_shortcut">Verknüpfung konnte nicht angelegt werden. Ist KISS Ihr Standard-Launcher\?</string>
     <string name="search_results_options">Suchergebnisse</string>
     <string name="search_provider_toggle">Verweise auf Web-Suchanbieter anzeigen</string>

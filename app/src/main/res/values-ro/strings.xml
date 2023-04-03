@@ -195,7 +195,6 @@
     <string name="swap_kiss_button_with_menu">Buton KISS în partea dreaptă</string>
     <string name="keyboard_suggestions">Activează sugestiile</string>
     <string name="notification_support">Arată un punct pe aplicațiile cu notificări</string>
-    <string name="notification_dialog">Alegeți KISS în următorul meniu pentru a activa.</string>
     <string name="cant_pin_shortcut">Nu s-a putut adăuga scurtătura. Este KISS lansatorul implicit\?</string>
     <string name="search_results_options">Rezultate căutare</string>
     <string name="search_provider_toggle">Legături către furnizorii de căutări pe internet</string>

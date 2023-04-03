@@ -234,7 +234,6 @@
     <string name="pref_fav_tags_drawable_desc">Turn off to use less memory for many fav tags</string>
     <string name="pref_fav_tags_drawable">Generate icons for fav tags</string>
     <string name="notification_support">Display a dot on apps with notifications</string>
-    <string name="notification_dialog">Check KISS in the following menu to turn it on.</string>
     <string name="cant_pin_shortcut">Could not add shortcut. Is KISS your default launcher\?</string>
     <string name="copy_confirmation">Copied to clipboard</string>
     <string name="large_favorites_bar">Use bigger favorites</string>
@@ -334,4 +333,5 @@
     <string name="always_default_web_search_on_enter">Always trigger default web search provider on enter</string>
     <string name="activity_setting">Launcher Settings</string>
     <string name="app_name">MindLauncher</string>
+    <string name="notification_dialog">Check MindLauncher in the following menu to turn it on.</string>
 </resources>

@@ -195,7 +195,6 @@
     <string name="keyboard_suggestions">启用自动完成/建议</string>
     <string name="swap_kiss_button_with_menu">在右边显示KISS按钮</string>
     <string name="notification_support">在有通知的APP上显示一个点</string>
-    <string name="notification_dialog">在以下菜单内选中KISS以启用该功能.</string>
     <string name="cant_pin_shortcut">无法添加快捷方式。KISS 是您的默认启动器吗？</string>
     <string name="search_results_options">搜索结果</string>
     <string name="search_provider_toggle">网络搜索提供者链接</string>

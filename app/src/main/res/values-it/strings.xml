@@ -199,7 +199,6 @@
     <string name="swap_kiss_button_with_menu">Pulsante di KISS sulla destra</string>
     <string name="keyboard_suggestions">Autocompletamento/Suggerimenti</string>
     <string name="notification_support">Mostra un punto su app che hanno notifiche</string>
-    <string name="notification_dialog">Abilita KISS nel menu seguente per attivarlo.</string>
     <string name="cant_pin_shortcut">Impossibile aggiungere la scorciatoia. KISS è il launcher predefinito\?</string>
     <string name="search_results_options">Risultati di ricerca</string>
     <string name="search_provider_toggle">Motori di ricerca web</string>

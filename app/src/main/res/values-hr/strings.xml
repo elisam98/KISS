@@ -213,7 +213,6 @@
     <string name="tags_visible">Prikaži oznake aplikacija</string>
     <string name="menu_widget_remove">Ukloni widget</string>
     <string name="copy_confirmation">Kopirano u međuspremnik</string>
-    <string name="notification_dialog">Označi KISS u sljedećem izborniku za uključivanje.</string>
     <string name="title_wallpaper">Interakcija sa slikom pozadine uživo</string>
     <string name="wp_drag_animate">Pomiči sliku pozadine</string>
     <string name="ui_excluded_from_history_apps">Pogledaj ili uredi aplikacije koju su izuzete iz povijesti</string>

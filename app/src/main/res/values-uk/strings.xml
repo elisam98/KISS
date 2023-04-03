@@ -195,7 +195,6 @@
     <string name="swap_kiss_button_with_menu">Коло KISS праворуч</string>
     <string name="keyboard_suggestions">Увімкнути самозаповнення/пропозиції</string>
     <string name="notification_support">Крапка в застосунках зі сповіщеннями</string>
-    <string name="notification_dialog">Надайте доступ KISS у наступному меню, щоб увімкнути його.</string>
     <string name="cant_pin_shortcut">Не вдалося додати ярлик. KISS - це ваш усталений запускач\?</string>
     <string name="search_results_options">Підсумки пошуку</string>
     <string name="search_provider_toggle">Посилання на пошукові служби</string>

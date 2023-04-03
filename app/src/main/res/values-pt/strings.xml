@@ -53,7 +53,6 @@
     <string name="search_provider_toggle">Ligações para aceder aos serviços de pesquisa</string>
     <string name="search_results_options">Resultados da pesquisa</string>
     <string name="cant_pin_shortcut">Não foi possível criar o atalho. KISS é o launcher padrão\?</string>
-    <string name="notification_dialog">Assinale KISS no menu seguinte para ativar.</string>
     <string name="notification_support">Mostrar ícone para aplicações com notificações</string>
     <string name="keyboard_suggestions">Ativar sugestões/preenchimento automático</string>
     <string name="swap_kiss_button_with_menu">Botão KISS à direita</string>

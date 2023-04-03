@@ -218,7 +218,6 @@
     <string name="menu_size_down">تقليص</string>
     <string name="copy_confirmation">تم النسخ إلى الحافظة</string>
     <string name="cant_pin_shortcut">تعذر إضافة الاختصار. هل KISS هو المطلق الافتراضي؟</string>
-    <string name="notification_dialog">أشر على KISS في القائمة التالية لتفعيلها.</string>
     <string name="notification_support">عرض نقطة على التطبيقات ذوات الإشعارات</string>
     <string name="unable_to_initialize_shortcuts">تعذر تهيئة الاختصارات. هل KISS هو المطلق الافتراضي؟</string>
     <string name="show_untagged">إظهار الغيرمعلَّمة</string>

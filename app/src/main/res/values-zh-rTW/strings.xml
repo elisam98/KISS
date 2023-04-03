@@ -172,7 +172,6 @@
     <string name="theme_bar_color">收藏列與搜尋列色彩</string>
     <string name="custom_icon_badged_adaptive_fill">自動適應、填充、有徽章的</string>
     <string name="custom_icon_application">應用程式</string>
-    <string name="notification_dialog">在接下來的目錄中勾選 KISS 以啟用。</string>
     <string name="ctx_menu">更多選項</string>
     <string name="import_settings_dialog">這會以剪貼板中的內容覆蓋掉你當前的設定。標籤會被*移除*。確定繼續？</string>
     <string name="force_adaptive_summary">將不自動適應的圖示縮小，並放在白色背景上</string>

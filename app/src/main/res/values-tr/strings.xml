@@ -195,7 +195,6 @@
     <string name="swap_kiss_button_with_menu">KISS düğmesi sağda</string>
     <string name="keyboard_suggestions">Otomatik tamamlamayı/öneriyi etkinleştir</string>
     <string name="notification_support">Bildirimi olan uygulamaların üzerinde bir nokta göster</string>
-    <string name="notification_dialog">Açmak için sonraki menüde KISS\'i gözden geçirin.</string>
     <string name="cant_pin_shortcut">Kısayol eklenemedi. KISS öntanımlı başlatıcınız mı\?</string>
     <string name="search_results_options">Arama sonuçları</string>
     <string name="search_provider_toggle">Web arama sağlayıcıların linkleri</string>

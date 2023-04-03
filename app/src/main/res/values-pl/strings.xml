@@ -233,7 +233,6 @@
     <string name="large_favorites_bar">Użyj większych ulubionych</string>
     <string name="copy_confirmation">Skopiowano do schowka</string>
     <string name="cant_pin_shortcut">Nie można dodać skrótu. Czy KISS jest domyślnym launcherem\?</string>
-    <string name="notification_dialog">Sprawdź KISS w poniższym menu, aby włączyć.</string>
     <string name="notification_support">Wyświetlaj kropkę w aplikacjach z powiadomieniami</string>
     <string name="pref_fav_tags_drawable">Generuj ikony dla ulubionych znaczników</string>
     <string name="pref_fav_tags_drawable_desc">Wyłącz by używać mniej pamięci przy wielu ulubionych znacznikach</string>

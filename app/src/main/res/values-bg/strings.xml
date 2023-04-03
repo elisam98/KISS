@@ -156,7 +156,6 @@
     <string name="large_favorites_bar">Използвайте по-големи любими</string>
     <string name="copy_confirmation">Копирано в клипборда</string>
     <string name="cant_pin_shortcut">Не можа да се добави пряк път. KISS вашият стартов панел по подразбиране ли е\?</string>
-    <string name="notification_dialog">Проверете KISS в следващото меню, за да го включите.</string>
     <string name="notification_support">Показвайте точка на приложения с известия</string>
     <string name="pref_fav_tags_drawable">Генерирайте икони за любими тагове</string>
     <string name="pref_fav_tags_drawable_desc">Изключете, за да използвате по-малко памет за много любими тагове</string>
