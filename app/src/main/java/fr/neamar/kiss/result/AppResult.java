@@ -117,19 +117,8 @@ public class AppResult extends Result {
 
     @Override
     protected ListPopup buildPopupMenu(Context context, ArrayAdapter<ListPopup.Item> adapter, final RecordAdapter parent, View parentView) {
-        if (!(context instanceof MainActivity) || ((MainActivity) context).isViewingSearchResults()) {
-            adapter.add(new ListPopup.Item(context, R.string.menu_remove));
-        }
-        adapter.add(new ListPopup.Item(context, R.string.menu_exclude));
         adapter.add(new ListPopup.Item(context, R.string.menu_favorites_add));
-        adapter.add(new ListPopup.Item(context, R.string.menu_app_rename));
-        // only display this option if we're using a custom icon pack, as it is not useful otherwise
-        if (KissApplication.getApplication(context).getIconsHandler().getCustomIconPack() != null)
-            adapter.add(new ListPopup.Item(context, R.string.menu_custom_icon));
         adapter.add(new ListPopup.Item(context, R.string.menu_favorites_remove));
-        adapter.add(new ListPopup.Item(context, R.string.menu_tags_edit));
-        adapter.add(new ListPopup.Item(context, R.string.menu_app_details));
-        adapter.add(new ListPopup.Item(context, R.string.menu_app_store));
 
         try {
             // app installed under /system can't be uninstalled
