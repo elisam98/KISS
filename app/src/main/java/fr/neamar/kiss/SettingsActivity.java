@@ -153,7 +153,7 @@ public class SettingsActivity extends PreferenceActivity implements
         };
 
         // This is reaaally slow, and always need to run asynchronously
-        Runnable alwaysAsync = () -> {
+//        Runnable alwaysAsync = () -> {
             // TODO: Note that there is a bug here with all of these settings pages:
             //  These settings pages load the list of AppPojos from DataHandler only once.
             //  This means that the data shown in these settings pages will be stale if the AppPojo
@@ -166,14 +166,14 @@ public class SettingsActivity extends PreferenceActivity implements
             //   as it won't have refreshed for the user having reset the list.
             //   This list will refresh if the user closes and re-opens KISS settings.
 //            SettingsActivity.this.addExcludedAppSettings();
-            SettingsActivity.this.addExcludedFromHistoryAppSettings();
-            SettingsActivity.this.addExcludedShortcutAppSettings();
-        };
+//            SettingsActivity.this.addExcludedFromHistoryAppSettings();
+//            SettingsActivity.this.addExcludedShortcutAppSettings();
+//        };
 
 //        addEnableShortcutsSwitch();
 //        addRegenerateShortcutsPreference();
 //        addResetExcludedAppShortcutsPreference();
-        reorderPreferencesWithDisplayDependency();
+//        reorderPreferencesWithDisplayDependency();
 
         if (savedInstanceState == null) {
             // Run asynchronously to open settings fast
@@ -191,7 +191,7 @@ public class SettingsActivity extends PreferenceActivity implements
                 }
             }
         }
-        AsyncTask.execute(alwaysAsync);
+//        AsyncTask.execute(alwaysAsync);
 
 
         permissionManager = new Permission(this);
@@ -200,22 +200,22 @@ public class SettingsActivity extends PreferenceActivity implements
     /**
      * Because we use the order to insert preferences we need to have gaps in the original order
      */
-    private void reorderPreferencesWithDisplayDependency() {
-        // get groups that need gaps
-        HashSet<PreferenceGroup> groups = new HashSet<>();
-        for (String gesturePref : PREF_LISTS_WITH_DEPENDENCY) {
-            Preference pref = findPreference(gesturePref);
-            groups.add(getParent(pref));
-        }
-        // set new order numbers
-        for (PreferenceGroup group : groups) {
-            int count = group.getPreferenceCount();
-            for (int idx = 0; idx < count; idx += 1) {
-                Preference pref = group.getPreference(idx);
-                pref.setOrder(idx * 10);
-            }
-        }
-    }
+//    private void reorderPreferencesWithDisplayDependency() {
+//        // get groups that need gaps
+//        HashSet<PreferenceGroup> groups = new HashSet<>();
+//        for (String gesturePref : PREF_LISTS_WITH_DEPENDENCY) {
+//            Preference pref = findPreference(gesturePref);
+//            groups.add(getParent(pref));
+//        }
+//        // set new order numbers
+//        for (PreferenceGroup group : groups) {
+//            int count = group.getPreferenceCount();
+//            for (int idx = 0; idx < count; idx += 1) {
+//                Preference pref = group.getPreference(idx);
+//                pref.setOrder(idx * 10);
+//            }
+//        }
+//    }
 
     private static Pair<CharSequence[], CharSequence[]> generateItemToRunListContent(@NonNull Context context) {
         List<AppPojo> appPojoList = KissApplication.getApplication(context).getDataHandler().getApplications();
@@ -302,17 +302,6 @@ public class SettingsActivity extends PreferenceActivity implements
     }
 
     @Override
-    public boolean onMenuItemSelected(int featureId, MenuItem item) {
-        if (item.getItemId() == R.id.help) {
-            Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse("http://help.kisslauncher.com"));
-            startActivity(intent);
-            return true;
-        }
-        return super.onMenuItemSelected(featureId, item);
-    }
-
-    @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         super.onPreferenceTreeClick(preferenceScreen, preference);
         // If the user has clicked on a preference screen, set up the action bar
@@ -384,35 +373,35 @@ public class SettingsActivity extends PreferenceActivity implements
 //        category.addPreference(excludedAppsScreen);
 //    }
 
-    private void addExcludedFromHistoryAppSettings() {
-        final DataHandler dataHandler = KissApplication.getApplication(this).getDataHandler();
-
-        PreferenceScreen excludedAppsScreen = ExcludePreferenceScreen.getInstance(
-                this,
-                new ExcludePreferenceScreen.IsExcludedCallback() {
-                    @Override
-                    public boolean isExcluded(@NonNull AppPojo app) {
-                        return app.isExcludedFromHistory();
-                    }
-                },
-                new ExcludePreferenceScreen.OnExcludedListener() {
-                    @Override
-                    public void onExcluded(final @NonNull AppPojo app) {
-                        dataHandler.addToExcludedFromHistory(app);
-                    }
-
-                    @Override
-                    public void onIncluded(final @NonNull AppPojo app) {
-                        dataHandler.removeFromExcludedFromHistory(app);
-                    }
-                },
-                R.string.ui_excluded_from_history_apps,
-                R.string.ui_excluded_apps_dialog_title
-        );
-
-        PreferenceGroup category = (PreferenceGroup) findPreference("exclude_apps_category");
-        category.addPreference(excludedAppsScreen);
-    }
+//    private void addExcludedFromHistoryAppSettings() {
+//        final DataHandler dataHandler = KissApplication.getApplication(this).getDataHandler();
+//
+//        PreferenceScreen excludedAppsScreen = ExcludePreferenceScreen.getInstance(
+//                this,
+//                new ExcludePreferenceScreen.IsExcludedCallback() {
+//                    @Override
+//                    public boolean isExcluded(@NonNull AppPojo app) {
+//                        return app.isExcludedFromHistory();
+//                    }
+//                },
+//                new ExcludePreferenceScreen.OnExcludedListener() {
+//                    @Override
+//                    public void onExcluded(final @NonNull AppPojo app) {
+//                        dataHandler.addToExcludedFromHistory(app);
+//                    }
+//
+//                    @Override
+//                    public void onIncluded(final @NonNull AppPojo app) {
+//                        dataHandler.removeFromExcludedFromHistory(app);
+//                    }
+//                },
+//                R.string.ui_excluded_from_history_apps,
+//                R.string.ui_excluded_apps_dialog_title
+//        );
+//
+//        PreferenceGroup category = (PreferenceGroup) findPreference("exclude_apps_category");
+//        category.addPreference(excludedAppsScreen);
+//    }
 
     /**
      * Adds the button for resetting the apps excluded from showing shortcuts,
@@ -471,39 +460,39 @@ public class SettingsActivity extends PreferenceActivity implements
 //        category.addPreference(pref);
 //    }
 
-    private void addExcludedShortcutAppSettings() {
-        if(!ShortcutUtil.canDeviceShowShortcuts()) {
-            return;
-        }
-
-        final DataHandler dataHandler = KissApplication.getApplication(this).getDataHandler();
-
-        PreferenceScreen excludedAppsScreen = ExcludePreferenceScreen.getInstance(
-                this,
-                new ExcludePreferenceScreen.IsExcludedCallback() {
-                    @Override
-                    public boolean isExcluded(@NonNull AppPojo app) {
-                        return app.isExcludedShortcuts();
-                    }
-                },
-                new ExcludePreferenceScreen.OnExcludedListener() {
-                    @Override
-                    public void onExcluded(final @NonNull AppPojo app) {
-                        dataHandler.addToExcludedShortcutApps(app);
-                    }
-
-                    @Override
-                    public void onIncluded(final @NonNull AppPojo app) {
-                        dataHandler.removeFromExcludedShortcutApps(app);
-                    }
-                },
-                R.string.ui_excluded_from_shortcuts_apps,
-                R.string.ui_excluded_apps_dialog_title
-        );
-
-        PreferenceGroup category = (PreferenceGroup) findPreference("exclude_apps_category");
-        category.addPreference(excludedAppsScreen);
-    }
+//    private void addExcludedShortcutAppSettings() {
+//        if(!ShortcutUtil.canDeviceShowShortcuts()) {
+//            return;
+//        }
+//
+//        final DataHandler dataHandler = KissApplication.getApplication(this).getDataHandler();
+//
+//        PreferenceScreen excludedAppsScreen = ExcludePreferenceScreen.getInstance(
+//                this,
+//                new ExcludePreferenceScreen.IsExcludedCallback() {
+//                    @Override
+//                    public boolean isExcluded(@NonNull AppPojo app) {
+//                        return app.isExcludedShortcuts();
+//                    }
+//                },
+//                new ExcludePreferenceScreen.OnExcludedListener() {
+//                    @Override
+//                    public void onExcluded(final @NonNull AppPojo app) {
+//                        dataHandler.addToExcludedShortcutApps(app);
+//                    }
+//
+//                    @Override
+//                    public void onIncluded(final @NonNull AppPojo app) {
+//                        dataHandler.removeFromExcludedShortcutApps(app);
+//                    }
+//                },
+//                R.string.ui_excluded_from_shortcuts_apps,
+//                R.string.ui_excluded_apps_dialog_title
+//        );
+//
+//        PreferenceGroup category = (PreferenceGroup) findPreference("exclude_apps_category");
+//        category.addPreference(excludedAppsScreen);
+//    }
 
     private void addCustomSearchProvidersPreferences(SharedPreferences prefs) {
         if (prefs.getStringSet("selected-search-provider-names", null) == null) {
