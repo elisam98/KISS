@@ -29,7 +29,7 @@ public class TagsHandler {
     TagsHandler(Context context) {
         this.context = context;
         tagsCache = DBHelper.loadTags(this.context);
-        addDefaultAliases();
+//        addDefaultAliases();
     }
 
     public void setTags(String id, String tags) {
@@ -72,50 +72,50 @@ public class TagsHandler {
         DBHelper.deleteTags(this.context);
     }
 
-    private void addDefaultAliases() {
-        final PackageManager pm = context.getPackageManager();
+//    private void addDefaultAliases() {
+//        final PackageManager pm = context.getPackageManager();
+//
+//        List<String> phoneApps = getApps(pm, Intent.ACTION_DIAL);
+//        String phoneAlias = context.getResources().getString(R.string.alias_phone);
+//        addDefaultAliases(phoneAlias, phoneApps);
+//
+//        List<String> contactApps = getAppsByCategory(pm, Intent.CATEGORY_APP_CONTACTS);
+//        String contactAlias = context.getResources().getString(R.string.alias_contacts);
+//        addDefaultAliases(contactAlias, contactApps);
+//
+//        List<String> browserApps = getAppsByCategory(pm, Intent.CATEGORY_APP_BROWSER);
+//        String webAlias = context.getResources().getString(R.string.alias_web);
+//        addDefaultAliases(webAlias, browserApps);
+//
+//        List<String> mailApps = getAppsByCategory(pm, Intent.CATEGORY_APP_EMAIL);
+//        String mailAlias = context.getResources().getString(R.string.alias_mail);
+//        addDefaultAliases(mailAlias, mailApps);
+//
+//        List<String> marketApps = getAppsByCategory(pm, Intent.CATEGORY_APP_MARKET);
+//        String marketAlias = context.getResources().getString(R.string.alias_market);
+//        addDefaultAliases(marketAlias, marketApps);
+//
+//        List<String> messagingApps = getAppsByCategory(pm, Intent.CATEGORY_APP_MESSAGING);
+//        String messagingAlias = context.getResources().getString(R.string.alias_messaging);
+//        addDefaultAliases(messagingAlias, messagingApps);
+//
+//        List<String> clockApps = getClockApps(pm);
+//        String clockAlias = context.getResources().getString(R.string.alias_clock);
+//        addDefaultAliases(clockAlias, clockApps);
+//    }
 
-        List<String> phoneApps = getApps(pm, Intent.ACTION_DIAL);
-        String phoneAlias = context.getResources().getString(R.string.alias_phone);
-        addDefaultAliases(phoneAlias, phoneApps);
+//    private void addDefaultAliases(@NonNull String aliases, @NonNull List<String> apps) {
+//        for (String app : apps) {
+//            addDefaultAlias(aliases, app);
+//        }
+//    }
 
-        List<String> contactApps = getAppsByCategory(pm, Intent.CATEGORY_APP_CONTACTS);
-        String contactAlias = context.getResources().getString(R.string.alias_contacts);
-        addDefaultAliases(contactAlias, contactApps);
-
-        List<String> browserApps = getAppsByCategory(pm, Intent.CATEGORY_APP_BROWSER);
-        String webAlias = context.getResources().getString(R.string.alias_web);
-        addDefaultAliases(webAlias, browserApps);
-
-        List<String> mailApps = getAppsByCategory(pm, Intent.CATEGORY_APP_EMAIL);
-        String mailAlias = context.getResources().getString(R.string.alias_mail);
-        addDefaultAliases(mailAlias, mailApps);
-
-        List<String> marketApps = getAppsByCategory(pm, Intent.CATEGORY_APP_MARKET);
-        String marketAlias = context.getResources().getString(R.string.alias_market);
-        addDefaultAliases(marketAlias, marketApps);
-
-        List<String> messagingApps = getAppsByCategory(pm, Intent.CATEGORY_APP_MESSAGING);
-        String messagingAlias = context.getResources().getString(R.string.alias_messaging);
-        addDefaultAliases(messagingAlias, messagingApps);
-
-        List<String> clockApps = getClockApps(pm);
-        String clockAlias = context.getResources().getString(R.string.alias_clock);
-        addDefaultAliases(clockAlias, clockApps);
-    }
-
-    private void addDefaultAliases(@NonNull String aliases, @NonNull List<String> apps) {
-        for (String app : apps) {
-            addDefaultAlias(aliases, app);
-        }
-    }
-
-    private void addDefaultAlias(String aliases, String app) {
-        // add aliases only if they haven't overridden by the user (not in db)
-        if (!tagsCache.containsKey(app)) {
-            tagsCache.put(app, aliases.replace(",", " ").trim().toLowerCase(Locale.ROOT));
-        }
-    }
+//    private void addDefaultAlias(String aliases, String app) {
+//        // add aliases only if they haven't overridden by the user (not in db)
+//        if (!tagsCache.containsKey(app)) {
+//            tagsCache.put(app, aliases.replace(",", " ").trim().toLowerCase(Locale.ROOT));
+//        }
+//    }
 
     @NonNull
     private List<String> getApps(PackageManager pm, String action) {
